@@ -12,8 +12,8 @@ export default defineNuxtConfig({
 
   css: ['~/assets/css/main.css'],
 
-  routeRules: {
-    '/': { prerender: true }
+  supabase: {
+    redirect: false
   },
 
   compatibilityDate: '2026-06-30',
