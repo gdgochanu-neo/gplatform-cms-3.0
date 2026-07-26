@@ -1,64 +1,68 @@
-# Nuxt Starter Template
+# GDGoC HANU - GPlatform CMS 3.0
+
+Powered by **Nuxt 4**, **Nuxt UI**, and **Supabase**, using **Bun** as the package manager and runtime.
 
 [![Nuxt UI](https://img.shields.io/badge/Made%20with-Nuxt%20UI-00DC82?logo=nuxt&labelColor=020420)](https://ui.nuxt.com)
+[![Bun](https://img.shields.io/badge/Package%20Manager-Bun-fbf0df?logo=bun&logoColor=black)](https://bun.sh)
 
-Use this template to get started with [Nuxt UI](https://ui.nuxt.com) quickly.
+---
 
-- [Live demo](https://starter-template.nuxt.dev/)
-- [Documentation](https://ui.nuxt.com/docs/getting-started/installation/nuxt)
+## ⚡ Tech Stack
 
-<a href="https://starter-template.nuxt.dev/" target="_blank">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://ui.nuxt.com/assets/templates/nuxt/starter-dark.png">
-    <source media="(prefers-color-scheme: light)" srcset="https://ui.nuxt.com/assets/templates/nuxt/starter-light.png">
-    <img alt="Nuxt Starter Template" src="https://ui.nuxt.com/assets/templates/nuxt/starter-light.png" width="830" height="466">
-  </picture>
-</a>
+- **Framework**: [Nuxt 4](https://nuxt.com)
+- **UI System**: [Nuxt UI v4](https://ui.nuxt.com)
+- **Database & Auth**: [Supabase](https://supabase.com) (`@nuxtjs/supabase`)
+- **Package Manager**: [Bun](https://bun.sh)
 
-> The starter template for Vue is on https://github.com/nuxt-ui-templates/starter-vue.
+---
 
-## Quick Start
+## 🚀 Setup & Installation
 
-```bash [Terminal]
-npm create nuxt@latest -- -t ui
-```
-
-## Deploy your own
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-name=starter&repository-url=https%3A%2F%2Fgithub.com%2Fnuxt-ui-templates%2Fstarter&demo-image=https%3A%2F%2Fui.nuxt.com%2Fassets%2Ftemplates%2Fnuxt%2Fstarter-dark.png&demo-url=https%3A%2F%2Fstarter-template.nuxt.dev%2F&demo-title=Nuxt%20Starter%20Template&demo-description=A%20minimal%20template%20to%20get%20started%20with%20Nuxt%20UI.)
-
-## Setup
-
-Make sure to install the dependencies:
+Make sure you have [Bun](https://bun.sh) installed.
 
 ```bash
-pnpm install
+# Install dependencies
+bun install
 ```
 
-## Development Server
+---
 
-Start the development server on `http://localhost:3000`:
+## 🛠️ Development
+
+Start the local development server on `http://localhost:3000`:
 
 ```bash
-pnpm dev
+bun run dev
 ```
 
-## Production
+---
 
-Build the application for production:
+## 📦 Production & Scripts
 
 ```bash
-pnpm build
+# Build for production
+bun run build
+
+# Preview production build locally
+bun run preview
+
+# Run ESLint
+bun run lint
+
+# Run Nuxt Typecheck
+bun run typecheck
 ```
 
-Locally preview production build:
+---
+
+## 🗄️ Supabase Type Generation
+
+Generate TypeScript types from your Supabase project:
 
 ```bash
-pnpm preview
+# Generate types from remote project (update project-id in package.json or command)
+bun run typegen
+
+# Or generate from local Supabase instance
+bunx supabase gen types typescript --local > app/types/database.types.ts
 ```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
-
-## Renovate integration
-
-Install [Renovate GitHub app](https://github.com/apps/renovate/installations/select_target) on your repository and you are good to go.
