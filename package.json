@@ -1,0 +1,30 @@
+{
+  "name": "GDGoC-HANU",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "lint": "eslint .",
+    "typecheck": "nuxt typecheck",
+    "typegen": "supabase gen types typescript --project-id YOUR_PROJECT_ID > app/types/database.types.ts"
+  },
+  "dependencies": {
+    "@iconify-json/lucide": "^1.2.117",
+    "@iconify-json/simple-icons": "^1.2.90",
+    "@nuxt/ui": "^4.10.0",
+    "@nuxtjs/supabase": "^2.0.9",
+    "nuxt": "^4.4.8",
+    "tailwindcss": "^4.3.2"
+  },
+  "devDependencies": {
+    "@nuxt/eslint": "^1.16.0",
+    "eslint": "^10.7.0",
+    "supabase": "^2.109.1",
+    "typescript": "^6.0.3",
+    "vue-tsc": "^3.3.7"
+  },
+  "packageManager": "bun@1.3.13"
+}
