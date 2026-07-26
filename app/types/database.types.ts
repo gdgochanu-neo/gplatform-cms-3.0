@@ -1,16 +1,14 @@
-export type Json =
-  | string
-  | number
-  | boolean
-  | null
-  | { [key: string]: Json | undefined }
-  | Json[]
+export type Json
+  = string
+    | number
+    | boolean
+    | null
+    | { [key: string]: Json | undefined }
+    | Json[]
 
 export type Database = {
   public: {
-    Tables: {
-      // Define your database tables here or generate with `bun run typegen`
-    }
+    Tables: Record<string, never>
     Views: {
       [_ in never]: never
     }
